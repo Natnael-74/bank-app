@@ -16,7 +16,7 @@ const customerSlice = createSlice({
           payload: {
             fullName,
             nationalID,
-            createdAt: new Date().toISOString(),
+            createdAt: new Date().toISOString(), // this side effect can not be done in the reducer, so we do it here in the prepare function
           },
         };
       },
